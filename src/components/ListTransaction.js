@@ -123,7 +123,7 @@ export default function ListTransaction() {
                       target="blank"
                       href={item.attache}
                     >
-                      {proof.substring(44)}
+                      {proof.substring(86)}
                     </a>
                   </th>
                   <th>{item?.dueDate ? parseInt(day) : "0"} / Hari</th>

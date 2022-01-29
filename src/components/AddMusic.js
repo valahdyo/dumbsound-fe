@@ -278,10 +278,11 @@ export default function AddMusic() {
                   Add Music{" "}
                   {handleSubmit.isLoading && (
                     <ReactLoading
+                      className="d-inline ms-3"
                       type="spin"
                       color="light gray"
-                      height={"3%"}
-                      width={"3%"}
+                      height={"8%"}
+                      width={"8%"}
                     />
                   )}
                 </Button>

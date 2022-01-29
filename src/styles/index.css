@@ -1,5 +1,5 @@
-@import url("http://fonts.cdnfonts.com/css/product-sans");
-@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "chat.css";
 @import "home.css";
@@ -13,19 +13,19 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Product sans", "sans-serif";
+  font-family: "Montserrat", sans-serif;
   background-color: #161616 !important;
 }
 
 .red-btn {
-  font-family: "Avenir LT Std", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 800;
   background-color: #ee4622;
   border-color: transparent;
 }
 
 .orange-btn {
-  font-family: "Avenir LT Std", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
   font-weight: 800;
   border-color: transparent;
   background-color: #f58033;
@@ -266,7 +266,7 @@ tr {
 }
 
 .ff-avenir {
-  font-family: "Avenir LT Std", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .ff-roboto {

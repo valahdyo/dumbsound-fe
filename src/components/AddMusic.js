@@ -1,5 +1,6 @@
 import { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
+import ReactLoading from "react-loading"
 import { useQuery, useMutation } from "react-query"
 import { API } from "../config/api"
 import { Form, Row, Col, Button, Container, Alert } from "react-bootstrap"
@@ -274,7 +275,10 @@ export default function AddMusic() {
                   type="submit"
                   size="sm"
                 >
-                  Add Music
+                  Add Music{" "}
+                  {handleSubmit.isLoading && (
+                    <ReactLoading type="spin" color="light gray" />
+                  )}
                 </Button>
               </div>
             </Form>

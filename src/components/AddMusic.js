@@ -277,7 +277,12 @@ export default function AddMusic() {
                 >
                   Add Music{" "}
                   {handleSubmit.isLoading && (
-                    <ReactLoading type="spin" color="light gray" />
+                    <ReactLoading
+                      type="spin"
+                      color="light gray"
+                      height={"20%"}
+                      width={"20%"}
+                    />
                   )}
                 </Button>
               </div>

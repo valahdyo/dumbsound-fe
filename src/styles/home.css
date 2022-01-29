@@ -1,0 +1,17 @@
+.header-wrapper {
+  background-image: url("../assets/header-image.png");
+  height: 500px;
+}
+
+.header-desc {
+  text-shadow: 0px 2px 7px rgba(0, 0, 0, 0.5);
+  padding: 15% 30% 0% 30%;
+}
+
+.card-year {
+  font-size: 14px;
+}
+
+.bg-secondary {
+  background-color: #3a3a3a;
+}

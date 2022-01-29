@@ -1,0 +1,274 @@
+@import url("http://fonts.cdnfonts.com/css/product-sans");
+@import url("http://fonts.cdnfonts.com/css/avenir-lt-std");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import "chat.css";
+@import "home.css";
+@import "navbar.css";
+@import "profile.css";
+@import "user.css";
+@import "admin.css";
+
+html {
+  background-color: #161616 !important;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Product sans", "sans-serif";
+  background-color: #161616 !important;
+}
+
+.red-btn {
+  font-family: "Avenir LT Std", sans-serif;
+  font-weight: 800;
+  background-color: #ee4622;
+  border-color: transparent;
+}
+
+.orange-btn {
+  font-family: "Avenir LT Std", sans-serif;
+  font-weight: 800;
+  border-color: transparent;
+  background-color: #f58033;
+}
+
+#a-register {
+  color: #b1b1b1;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+select:required:invalid {
+  color: #d2d2d2;
+}
+
+select:required:invalid {
+  color: #d2d2d2;
+}
+
+option {
+  color: #161616;
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+
+.progress-bar {
+  color: #ee4622 !important;
+  overflow: visible;
+  background-color: transparent !important;
+}
+
+.rc-slider-handle,
+.rc-slider-track {
+  background-color: #ee4622 !important;
+}
+
+#dropdown-basic,
+#dropdown-basic:active {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-primary:active:focus,
+.btn-primary:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgb(49 132 253 / 0%);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  background-color: #474747;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-menu {
+  background-color: #3a3a3a;
+  color: white;
+}
+
+.dropdown-item {
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+hr:not([size]) {
+  height: 3px;
+}
+
+.dropdown-menu:after {
+  position: absolute;
+  top: -6px;
+  left: 125px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #3a3a3a;
+  border-left: 6px solid transparent;
+  content: "";
+}
+
+.dropdown-menu-admin:after {
+  position: absolute;
+  top: -6px;
+  left: 15px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid transparent;
+  content: "";
+}
+
+.navbar-expand .navbar-nav .dropdown-menu {
+  position: absolute;
+  left: -90px;
+}
+
+.table-dark {
+  --bs-table-bg: #2b2b2b;
+  --bs-table-striped-bg: #3a3a3a;
+  --bs-table-striped-color: #fff;
+  --bs-table-active-bg: #373b3e;
+  --bs-table-active-color: #fff;
+  --bs-table-hover-bg: #323539;
+  --bs-table-hover-color: #fff;
+  color: #fff;
+  border-color: #373b3e;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: lightgray;
+  border-style: solid;
+  border-width: 0px;
+}
+
+.form-color {
+  background-color: rgba(210, 210, 210, 0.25);
+  border: 2px solid #d2d2d2;
+  border-radius: 5px;
+}
+
+.form-control,
+.form-select,
+.form-control:focus {
+  color: #fff;
+  background-color: rgba(210, 210, 210, 0.25);
+}
+
+.form-color::placeholder {
+  color: #d2d2d2;
+  opacity: 1;
+}
+
+.form-select {
+  background-image: url("../assets/Polygon-select.png");
+}
+
+.upload-btn,
+.upload-btn:hover,
+.upload-btn:active,
+.upload-btn:focus,
+.upload-btn:active:focus {
+  background: rgba(210, 210, 210, 0.25);
+  border: 2px solid #d2d2d2;
+  color: #d2d2d2;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  padding: 3px;
+  font-size: 15px;
+}
+
+.upload-btn-icon {
+  margin-left: 70px;
+  width: 15px;
+  height: 24px;
+}
+
+.thumbnail-img {
+  width: inherit;
+  height: 9.375rem;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0;
+}
+.card:hover {
+  box-shadow: 0px 0px 10px rgb(136, 136, 136);
+}
+.prev-img {
+  width: 22rem;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Utility Class */
+
+.red-color {
+  color: #ee4622;
+}
+
+.gray-color {
+  color: #b1b1b1;
+}
+
+.light-color {
+  color: #ffffff;
+}
+
+.dark-color {
+  color: #3a3a3a;
+}
+
+.bg-color {
+  background-color: #161616;
+}
+
+.bg-dropdown-color {
+  background-color: #3a3a3a;
+}
+
+.f-48 {
+  font-size: 48px;
+}
+
+.f-24 {
+  font-size: 24px;
+}
+
+.f-14 {
+  font-size: 14px;
+}
+
+.f-18 {
+  font-size: 18px;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.ff-avenir {
+  font-family: "Avenir LT Std", sans-serif;
+}
+
+.ff-roboto {
+  font-family: "Roboto", sans-serif;
+}

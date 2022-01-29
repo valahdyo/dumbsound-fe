@@ -280,8 +280,8 @@ export default function AddMusic() {
                     <ReactLoading
                       type="spin"
                       color="light gray"
-                      height={"20%"}
-                      width={"20%"}
+                      height={"3%"}
+                      width={"3%"}
                     />
                   )}
                 </Button>

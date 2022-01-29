@@ -271,19 +271,13 @@ export default function AddMusic() {
                 <Button
                   onClick={(e) => handleSubmit.mutate(e)}
                   // style={{ marginLeft: "75%" }}
-                  className="mt-3 orange-btn w-25 text-center "
+                  className="mt-3 orange-btn w-25 text-center d-flex justify-content-center"
                   type="submit"
                   size="sm"
                 >
-                  Add Music{" "}
+                  <div className="me-3">Add Music</div>
                   {handleSubmit.isLoading && (
-                    <ReactLoading
-                      className="d-inline ms-3"
-                      type="spin"
-                      color="light gray"
-                      height={"8%"}
-                      width={"8%"}
-                    />
+                    <ReactLoading type="spin" height="8%" width="8%" />
                   )}
                 </Button>
               </div>

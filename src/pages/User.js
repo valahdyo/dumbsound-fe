@@ -1,7 +1,7 @@
 import { useRef, useState } from "react"
 import { useMutation, useQuery } from "react-query"
 import { API } from "../config/api"
-
+import ReactLoading from "react-loading"
 import { Col, Container, Form, Row, Alert, Button } from "react-bootstrap"
 import NavbarComponent from "../components/Navbar"
 import { useHistory } from "react-router-dom"
@@ -204,11 +204,14 @@ export default function User() {
                 </div>
                 <Button
                   onClick={(e) => handleSubmit.mutate(e)}
-                  className="mt-4 orange-btn w-100"
+                  className="mt-4 orange-btn w-100 d-flex justify-content-center"
                   type="submit"
                   size="sm"
                 >
-                  Send
+                  <div className="me-3">Send</div>
+                  {handleSubmit.isLoading && (
+                    <ReactLoading type="spin" height="5%" width="5%" />
+                  )}
                 </Button>
               </Form>
             </>

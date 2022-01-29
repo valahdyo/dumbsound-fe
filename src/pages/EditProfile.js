@@ -2,6 +2,7 @@ import { useState, useRef } from "react"
 import { useHistory } from "react-router-dom"
 import { API } from "../config/api"
 import { useQuery, useMutation } from "react-query"
+import ReactLoading from "react-loading"
 import ProfilePhoto from "../assets/profile-photo.png"
 import NoData from "../assets/noData-2.svg"
 
@@ -237,11 +238,14 @@ export default function EditProfile() {
 
               <Button
                 onClick={(e) => handleSubmit.mutate(e)}
-                className="mt-3 red-btn w-100"
+                className="mt-3 red-btn w-100 d-flex justify-content-center"
                 type="submit"
                 size="sm"
               >
-                Update Detail
+                <div className="me-3">Update Detail</div>
+                {handleSubmit.isLoading && (
+                  <ReactLoading type="spin" height="3%" width="3%" />
+                )}
               </Button>
             </Form>
           </Col>

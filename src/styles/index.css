@@ -203,6 +203,9 @@ tr {
   padding: 0;
 }
 
+.card:hover {
+  box-shadow: 0px 0px 10px #797878;
+}
 .prev-img {
   width: 22rem;
   height: auto;

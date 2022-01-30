@@ -21,7 +21,7 @@ export default function User() {
   })
 
   let { data: profile } = useQuery("profileCache", async () => {
-    const response = await API.get("/profile")
+    const response = await API.get("/user/profile")
 
     return response.data.data
   })

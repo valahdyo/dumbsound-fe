@@ -145,6 +145,7 @@ tfoot,
 th,
 thead,
 tr {
+  font-weight: bold;
   border-color: lightgray;
   border-style: solid;
   border-width: 0px;

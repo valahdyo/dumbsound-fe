@@ -212,6 +212,13 @@ tr {
   object-fit: cover;
 }
 
+.input-filter {
+  color: #cac3c3;
+  background-color: rgba(210, 210, 210, 0.25);
+  border-radius: 5px;
+  border-style: solid;
+}
+
 /* Utility Class */
 
 .red-color {

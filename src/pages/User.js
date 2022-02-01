@@ -1,4 +1,4 @@
-import { useRef, useState } from "react"
+import { useRef, useState, useEffect } from "react"
 import { useMutation, useQuery } from "react-query"
 import { API } from "../config/api"
 import ReactLoading from "react-loading"
@@ -50,20 +50,9 @@ export default function User() {
     }
   }
 
-  const handleUploadImage = () => {
-    inputRef.current?.click()
-  }
-
-  const resetFile = () => {
-    setUploadedFileName(null)
-    inputRef.current.file = null
-    form.attache = ""
-  }
-
   const handleSubmit = useMutation(async (e) => {
     try {
       e.preventDefault()
-      console.log(form)
 
       const formData = new FormData()
       if (!form.attache[0]) {
@@ -77,9 +66,10 @@ export default function User() {
           "Content-type": "multipart/form-data",
         },
       }
-      console.log(form)
+
       const response = await API.post("/transaction/create", formData, config)
-      history.push("/")
+
+      history.push("/user")
     } catch (error) {
       console.log(error)
       const alert = (
@@ -88,6 +78,60 @@ export default function User() {
         </Alert>
       )
       setMessage(alert)
+    }
+  })
+
+  useEffect(() => {
+    //change this to the script source you want to load, for example this is snap.js sandbox env
+    const midtransScriptUrl = "https://app.sandbox.midtrans.com/snap/snap.js"
+    //change this according to your client-key
+    const myMidtransClientKey = "SB-Mid-client-nBQolgt3n8su8Qlw"
+
+    let scriptTag = document.createElement("script")
+    scriptTag.src = midtransScriptUrl
+    // optional if you want to set script attribute
+    // for example snap.js have data-client-key attribute
+    scriptTag.setAttribute("data-client-key", myMidtransClientKey)
+
+    document.body.appendChild(scriptTag)
+    return () => {
+      document.body.removeChild(scriptTag)
+    }
+  }, [])
+
+  const handlePay = useMutation(async (e) => {
+    try {
+      e.preventDefault()
+      const config = {
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+      const response = await API.get("/transaction/create-gateway", config)
+      const token = response.data.payment.token
+
+      window.snap.pay(token, {
+        onSuccess: function (result) {
+          /* You may add your own implementation here */
+          console.log(result)
+          history.push("/user")
+        },
+        onPending: function (result) {
+          /* You may add your own implementation here */
+          console.log(result)
+          history.push("/user")
+        },
+        onError: function (result) {
+          /* You may add your own implementation here */
+          console.log(result)
+        },
+        onClose: function () {
+          /* You may add your own implementation here */
+          alert("you closed the popup without finishing the payment")
+        },
+      })
+    } catch (error) {
+      console.log(error)
     }
   })
 
@@ -213,6 +257,22 @@ export default function User() {
                     <ReactLoading type="spin" height="5%" width="5%" />
                   )}
                 </Button>
+                <div className="mt-4">
+                  <p className="red-color">
+                    Atau bayar dengan pilihan pembayaran lain
+                  </p>
+                  <Button
+                    onClick={(e) => handlePay.mutate(e)}
+                    className="orange-btn w-100 d-flex justify-content-center"
+                    type="submit"
+                    size="sm"
+                  >
+                    <div className="me-3">Pay with other method</div>
+                    {handleSubmit.isLoading && (
+                      <ReactLoading type="spin" height="5%" width="5%" />
+                    )}
+                  </Button>
+                </div>
               </Form>
             </>
           )}

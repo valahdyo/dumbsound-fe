@@ -76,14 +76,14 @@ export default function LoginModal({
     }
   }
 
-  const handleDemoAdmin = () => {
+  const handleDemoAdmin = (e) => {
     setForm({ email: "admin@mail.com", password: "123456" })
-    handleSubmit()
+    handleSubmit(e)
   }
 
-  const handleDemoCustomer = () => {
-    setForm({ email: "narji@mail.com", password: "123456" })
-    handleSubmit()
+  const handleDemoCustomer = (e) => {
+    setForm({ email: "najwa@mail.com", password: "123456" })
+    handleSubmit(e)
   }
 
   const handleClickHere = () => {

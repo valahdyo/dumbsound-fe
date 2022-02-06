@@ -75,7 +75,7 @@ export default function LoginModal({
       console.log(error)
     }
   }
-
+  //admin
   const handleDemoAdmin = (e) => {
     setForm({ email: "admin@mail.com", password: "123456" })
     handleSubmit(e)

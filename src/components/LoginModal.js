@@ -145,7 +145,7 @@ export default function LoginModal({
                 </p>
                 <Button
                   onClick={handleDemoCustomer}
-                  className="red-btn mb-3"
+                  className="red-btn mb-4"
                   style={{ width: "100%" }}
                 >
                   Demo Customer

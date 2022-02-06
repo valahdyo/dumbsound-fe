@@ -38,7 +38,7 @@ export default function LoginModal({
 
       // Data body
       const body = JSON.stringify(form)
-
+      console.log(body)
       // Insert data for login process
       const response = await API.post("/auth/login", body, config)
       // Checking process

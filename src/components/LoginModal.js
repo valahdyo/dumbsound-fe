@@ -76,6 +76,16 @@ export default function LoginModal({
     }
   }
 
+  const handleDemoAdmin = () => {
+    setForm({ email: "admin@mail.com", password: "123456" })
+    handleSubmit()
+  }
+
+  const handleDemoCustomer = () => {
+    setForm({ email: "narji@mail.com", password: "123456" })
+    handleSubmit()
+  }
+
   const handleClickHere = () => {
     closeLogin()
     handleShowRegister()
@@ -133,6 +143,20 @@ export default function LoginModal({
                     </a>
                   </strong>
                 </p>
+                <Button
+                  onClick={handleDemoCustomer}
+                  className="red-btn mb-3"
+                  style={{ width: "100%" }}
+                >
+                  Demo Customer
+                </Button>
+                <Button
+                  onClick={handleDemoAdmin}
+                  className="red-btn mb-3"
+                  style={{ width: "100%" }}
+                >
+                  Demo Admin
+                </Button>
               </Form>
             </Col>
           </Row>

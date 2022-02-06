@@ -79,7 +79,7 @@ export default function EditProfile() {
           "Content-type": "multipart/form-data",
         },
       }
-      console.log(form)
+
       const response = await API.patch("/user/edit-profile", formData, config)
       history.push("/user/profile")
     } catch (error) {
@@ -95,7 +95,7 @@ export default function EditProfile() {
 
   if (profile?.userPayment.length > 0) {
     var expired = null
-    console.log("executed ", profile)
+
     profile?.userPayment.map((item) => {
       if (item.dueDate) {
         expired = new Date(item.dueDate).toDateString()

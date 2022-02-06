@@ -20,7 +20,6 @@ export default function RegisterModal({ showRegister, closeRegister }) {
   const { email, password, fullName, gender, phone, address } = form
 
   const handleOnChange = (e) => {
-    console.log(e.target.value)
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -29,7 +28,6 @@ export default function RegisterModal({ showRegister, closeRegister }) {
 
   const handleSubmit = async (e) => {
     try {
-      console.log("register executed")
       e.preventDefault()
 
       const config = {

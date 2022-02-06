@@ -30,7 +30,6 @@ export default function ChatAdmin() {
 
     // define listener for every updated message
     socket.on("new message", () => {
-      console.log("contact", contact)
       socket.emit("load messages", contact?.id)
     })
 

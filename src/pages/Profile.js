@@ -14,13 +14,13 @@ function Profile() {
    */
   let { data: profile } = useQuery("profileCache", async () => {
     const response = await API.get("/user/profile")
-    console.log(response.data.data)
+
     return response.data.data
   })
 
   if (profile?.userPayment.length > 0) {
     var expired = null
-    console.log("executed ", profile)
+
     profile?.userPayment.map((item, index) => {
       if (item.dueDate) {
         expired = new Date(item.dueDate).toDateString()

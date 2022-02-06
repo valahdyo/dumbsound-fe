@@ -32,7 +32,6 @@ function DropdownComponent() {
     history.push("/admin/add-artist")
   }
   const handleLogout = (e) => {
-    console.log("logout")
     e.preventDefault()
     dispatch({ type: "LOGOUT" })
     history.push("/")

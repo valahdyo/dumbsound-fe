@@ -36,7 +36,6 @@ export default function User() {
   }
 
   const handleChange = (e) => {
-    console.log(e.target)
     setForm({
       ...form,
       [e.target.name]: e.target.files,
@@ -113,17 +112,16 @@ export default function User() {
       window.snap.pay(token, {
         onSuccess: function (result) {
           /* You may add your own implementation here */
-          console.log(result)
+
           history.push("/user")
         },
         onPending: function (result) {
           /* You may add your own implementation here */
-          console.log(result)
+
           history.push("/user")
         },
         onError: function (result) {
           /* You may add your own implementation here */
-          console.log(result)
         },
         onClose: function () {
           /* You may add your own implementation here */

@@ -159,7 +159,6 @@ export default function ListTransaction() {
    */
   const handleApprove = async (idTransaction) => {
     try {
-      console.log(idTransaction)
       const response = await API.patch("/transaction/approve/" + idTransaction)
       if (response?.status === 200) {
         refetch()

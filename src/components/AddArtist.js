@@ -16,7 +16,6 @@ export default function AddArtist() {
   const { name, old, type, startCarerr } = form
 
   const handleOnChange = (e) => {
-    console.log(e.target.value)
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -35,7 +34,7 @@ export default function AddArtist() {
 
       const body = JSON.stringify(form)
       const response = await API.post("/artist/add", body, config)
-      console.log(response)
+
       if (response?.status === 200) {
         const alert = (
           <Alert variant="success" className="py-1">

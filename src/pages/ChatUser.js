@@ -30,8 +30,6 @@ export default function ChatUser() {
 
     // define corresponding socket listener
     socket.on("new message", () => {
-      console.log("contact", contact)
-      console.log("triggered", contact?.id)
       socket.emit("load messages", contact?.id)
     })
 

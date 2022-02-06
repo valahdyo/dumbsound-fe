@@ -94,14 +94,13 @@ export default function AddMusic() {
       formData.set("title", form.title)
       formData.set("year", form.year)
       formData.set("artisId", form.artisId)
-      console.log("formdata", formData)
 
       const config = {
         headers: {
           "Content-type": "multipart/form-data",
         },
       }
-      console.log(form)
+
       const response = await API.post("/music/add", formData, config)
       if (response.status == 200) {
         clearForm()
